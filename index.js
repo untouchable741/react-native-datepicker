@@ -149,6 +149,9 @@ class DatePicker extends Component {
       return date;
     }
 
+    if (mode === 'date') {
+      return Moment.utc(date, format).toDate();
+    }
     return Moment(date, format).toDate();
   }
 
